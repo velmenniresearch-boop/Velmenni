@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Velmenni Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://miro.medium.com/v2/resize:fit:2400/1*ktp5PvpkcZ0Mvb9gwzLiDg.png" type="image/x-icon">
+    <link rel="stylesheet" href="style2.css">
+  <style>
+    /* Fullscreen video background */
+    #bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5); /* dim for text readability */
+    }
+    /* Content container on top of video */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 40px auto 60px;
+      padding: 20px 30px;
+      background: rgba(0,0,0,0.55);
+      border-radius: 10px;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+    /* Header and nav styling */
+    header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      background: rgba(0,0,0,0.7);
+      padding: 10px 20px;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    }
+    .logo-container img {
+      height: 40px;
+    }
+    nav.nav-menu {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    nav.nav-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    nav.nav-menu a:hover,
+    nav.nav-menu a.w--current {
+      background-color: #1a73e8;
+    }
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+    }
+    .dropbtn {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      user-select: none;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(0,0,0,0.85);
+      min-width: 140px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+      border-radius: 6px;
+      top: 120%;
+      left: 0;
+      z-index: 10;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #1a73e8;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Footer styling */
+    footer.section-footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #1c1c1c;
+      color: #fff;
+      font-size: 0.9rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      z-index: 1;
+      margin-top: 60px;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .content {
+        margin: 20px 10px 40px;
+        padding: 15px 20px;
+      }
+      nav.nav-menu {
+        gap: 10px;
+      }
+      .logo-container img {
+        height: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+      <!-- Video Background -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://media.istockphoto.com/id/1226288940/ru/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE/%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D1%8B-%D0%BA%D1%80%D1%83%D0%B3%D0%B0-hud-hi-tech-%D1%84%D1%83%D1%82%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%B4%D0%B8%D1%81%D0%BF%D0%BB%D0%B5%D0%B9.mp4?s=mp4-640x640-is&k=20&c=SJD2THnoK8775pgGtKFpkwoCRjPtfutN0ezwWMgDyEo=" type="video/mp4" />
+    <source src="https://media.istockphoto.com/id/1226288940/ru/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE/%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D1%8B-%D0%BA%D1%80%D1%83%D0%B3%D0%B0-hud-hi-tech-%D1%84%D1%83%D1%82%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%B4%D0%B8%D1%81%D0%BF%D0%BB%D0%B5%D0%B9.mp4?s=mp4-640x640-is&k=20&c=SJD2THnoK8775pgGtKFpkwoCRjPtfutN0ezwWMgDyEo=" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+<header>
+    <div class="logo-container">
+        <a href="index.html" style="text-decoration: none; color: white;">
+            <img src="https://cdn.prod.website-files.com/61a9889b624de53b8f5cbd61/6216419d583e5a3cb4c0cea3_Velmenni_logo.png" alt="Velmenni Logo" style="height: 50px; margin-right: 15px;" />
+        </a>
+    </div>
+    <nav class="nav-menu"> 
+        <a href="index.html" class="link-block w-inline-block"><div class="text-block">Home</div></a>
+        <div class="dropdown">
+            <a href="choose.html" class="dropbtn">Product</a>
+            <div class="dropdown-content">
+                <a href="lifi-indoor.html">LiFi Indoor</a>
+                <a href="lifi-outdoor.html">LiFi Outdoor</a>
+            </div>
+        </div>
+        <a href="work.html" class="link-block w-inline-block"><div class="text-block-2">How it works</div></a>
+        <a href="Schedule.html" class="link-block w-inline-block"><div class="text-block-3">Demo</div></a>
+        <a href="blog.html" class="link-block w-inline-block w--current"><div class="text-block">Blog</div></a>
+    </nav>
+    <button id="themeToggle">🌙</button>
+</header>
+
+<main>
+    <section class="blog-hero">
+        <h1>Velmenni Insights</h1>
+        <p>Stay informed with the latest updates, innovations, and thoughts on Li-Fi and light-based communication technologies.</p>
+    </section>
+
+    <section class="blog-list">
+        <article class="blog-post">
+            <img src="https://etimg.etb2bimg.com/photo/72177382.cms" alt="LiFi Technology" class="blog-thumbnail">
+            <h2>Li-Fi vs Wi-Fi: What's the Difference?</h2>
+            <p>Explore the core differences between Li-Fi and traditional Wi-Fi, and understand why light-based communication is gaining traction.</p>
+            <a href="blog-lifi-vs-wifi.html" class="read-more">Read More →</a>
+        </article>
+
+        <article class="blog-post">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGkoW3iW2C_LUXcP7eXW8EVIuo8m9uxkLkag&s" alt="LiFi in Hospitals" class="blog-thumbnail">
+            <h2>How Li-Fi is Changing Communication in Hospitals</h2>
+            <p>Learn how hospitals are using Li-Fi to avoid interference and ensure secure data transmission within sensitive environments.</p>
+            <a href="hospitals-lifi.html" class="read-more">Read More →</a>
+        </article>
+
+        <article class="blog-post">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ04hX5bJ9No5xyuCBTcL8FFbaYh--LjCa7Mg&s" alt="Industrial LiFi Use" class="blog-thumbnail">
+            <h2>Industrial Applications of Li-Fi</h2>
+            <p>From smart factories to mining, discover how Li-Fi is revolutionizing industrial communication in harsh and radio-restricted environments.</p>
+            <a href="industrial-lifi.html" class="read-more">Read More →</a>
+        </article>
+
+        <article class="blog-post">
+            <img src="https://images.yourstory.com/cs/1/8817a2f0-ce40-11e9-afdd-33aa42346f98/lifi-theme-young-man1567679576812.jpg?mode=crop&crop=faces&ar=16%3A9&format=auto&w=1920&q=75" alt="Future of LiFi" class="blog-thumbnail">
+            <h2>The Future of Light Communication</h2>
+            <p>What’s next for light-based technologies? A forward-looking view on global adoption, challenges, and future research in Li-Fi.</p>
+            <a href="light-communication-future.html" class="read-more">Read More →</a>
+        </article>
+    </section>
+</main>
+<footer class="section-footer">
+    <div class="footer-email-capture"> 
+        <div class="grid-container left-alignment">
+            <div class="footer-description-text">We can help you grow at a lighting speed</div>
+            <h2 class="h2 white">Stay updated</h2>
+        </div>
+        <form class="form" method="get">
+            <label for="email" class="input-text">Email Address:</label>
+            <div class="email-capture">
+                <input type="email" class="text-field w-input" placeholder="Enter your email address" required>
+                <input type="submit" value="Submit" class="submit-button w-button">
+            </div>
+        </form>
+    </div>
+
+    <div class="footer-divider"></div>
+    <div class="w-layout-grid footer-links">
+        <div class="footer-link-block">
+            <h2 class="h2 white">Company</h2>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="career.html" class="footer-link">Careers</a>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+        </div>
+        <div class="footer-link-block">
+            <h2 class="h2 white">Resources</h2>
+            <a href="blog.html" class="footer-link">Blog</a>
+            <a href="caseStudy.html" class="footer-link">Case Studies</a>
+            <a href="whitepaper.html" class="footer-link">Whitepapers</a>
+        </div>
+        <div class="footer-link-block">
+            <h2 class="h2 white">Support</h2>
+            <a href="faq.html" class="footer-link">FAQ</a>
+            <a href="documentation.html" class="footer-link">Documentation</a>
+            <a href="Community.html" class="footer-link">Community</a>
+        </div>
+    </div>
+    <p>&copy; 2025 Velmenni. All rights reserved.</p>
+</footer>
+</body>
+</html>

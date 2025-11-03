@@ -1,0 +1,339 @@
+/* style1.css */
+
+/* Reset & basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: #0c1f36; /* fallback if video doesn't load */
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Video background */
+#bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.45);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(19, 13, 51, 0.7);
+  padding: 15px 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  height: 40px;
+}
+
+nav.nav-menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav.nav-menu a:hover,
+nav.nav-menu a.w--current {
+  text-decoration: underline;
+  color: #ffca28; /* bright yellow hover */
+}
+
+button#themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+button#themeToggle:hover {
+  color: #ffca28;
+}
+
+/* Main content container */
+main {
+  max-width: 800px;
+  margin: 40px auto 60px auto;
+  padding: 20px 30px;
+  background: rgba(184, 180, 180, 0.55);
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 15px rgba(26, 115, 232, 0.3);
+}
+
+/* Section titles */
+h1, h2, h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 25px;
+}
+
+/* Paragraph and lists */
+p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Form styles */
+.application-form {
+  max-width: 500px;
+  margin-top: 30px;
+  padding: 20px;
+  background: #0c1f36;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(26, 115, 232, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.application-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.application-form input[type="text"],
+.application-form input[type="email"],
+.application-form input[type="tel"],
+.application-form textarea,
+.application-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: inherit;
+  color: #0c1f36;
+}
+
+.application-form input[type="file"] {
+  padding: 6px 10px;
+  background: white;
+  color: black;
+}
+
+.application-form input[type="text"]:focus,
+.application-form input[type="email"]:focus,
+.application-form input[type="tel"]:focus,
+.application-form textarea:focus {
+  outline: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.application-form textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+/* Submit button */
+.application-form button.submit-button {
+  background-color: #ffca28; /* bright yellow */
+  color: #333;
+  font-weight: 700;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(255, 202, 40, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.application-form button.submit-button:hover,
+.application-form button.submit-button:focus {
+  background-color: #f9a825;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Success message */
+.success-message {
+  max-width: 500px;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: none;
+}
+
+/* Footer */
+.section-footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 40px 20px 20px 20px;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+}
+
+.footer-email-capture {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  color: white;
+}
+
+.footer-email-capture .footer-description-text {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.footer-email-capture h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.footer-form-block {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer-form-block form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-form-block input.text-field {
+  flex: 1;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1em;
+}
+
+.footer-form-block input.text-field:focus {
+  outline: none;
+  box-shadow: 0 0 8px #ffca28;
+}
+
+.footer-form-block input.submit-button {
+  background-color: #ffca28;
+  color: #333;
+  font-weight: 700;
+  border-radius: 30px;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-form-block input.submit-button:hover {
+  background-color: #f9a825;
+}
+
+/* Footer links grid */
+.w-layout-grid.footer-links {
+  max-width: 800px;
+  margin: 30px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 30px;
+  color: white;
+}
+
+.footer-link-block h2 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-link-block a.footer-link {
+  display: block;
+  margin-bottom: 10px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link-block a.footer-link:hover {
+  color: #ffca28;
+}
+
+/* Footer copyright */
+footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  nav.nav-menu a {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    margin: 20px 15px 40px 15px;
+    padding: 15px 20px;
+  }
+
+  .application-form {
+    padding: 15px;
+  }
+
+  .footer-email-capture,
+  .w-layout-grid.footer-links {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}

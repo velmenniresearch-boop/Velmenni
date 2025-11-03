@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose LiFi Type</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .option-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .option-button:hover {
+            background-color: #0056b3;
+        }
+        #bg-video {
+            position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5); /* dim for text readability */
+    }
+    /* Content container on top of video */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 40px auto 60px;
+      padding: 20px 30px;
+      background: rgba(0,0,0,0.55);
+      border-radius: 10px;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+    /* Header and nav styling */
+    header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      background: rgba(0,0,0,0.7);
+      padding: 10px 20px;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    }
+    .logo-container img {
+      height: 40px;
+    }
+    nav.nav-menu {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    nav.nav-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    nav.nav-menu a:hover,
+    nav.nav-menu a.w--current {
+      background-color: #1a73e8;
+    }
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+    }
+    .dropbtn {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      user-select: none;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(0,0,0,0.85);
+      min-width: 140px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+      border-radius: 6px;
+      top: 120%;
+      left: 0;
+      z-index: 10;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #1a73e8;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Footer styling */
+    footer.section-footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #1c1c1c;
+      color: #fff;
+      font-size: 0.9rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      z-index: 1;
+      margin-top: 60px;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .content {
+        margin: 20px 10px 40px;
+        padding: 15px 20px;
+      }
+      nav.nav-menu {
+        gap: 10px;
+      }
+      .logo-container img {
+        height: 30px;
+      }
+    }
+    </style>
+</head>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://media.istockphoto.com/id/1458213363/ru/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE/%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE-%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%BE%D0%B9-%D0%BD%D0%B5%D0%BE%D0%BD-%D1%81-%D0%BF%D0%BE%D0%B4%D0%B8%D1%83%D0%BC%D0%BD%D1%8B%D0%BC-%D1%84%D0%BE%D0%BD%D0%BE%D0%BC.mp4?s=mp4-640x640-is&k=20&c=ul9G2-kZEJvjMstZajHJnDOQz5ZQBdtA9QGltToBGyU=" type="video/mp4" />
+    <source src="https://media.istockphoto.com/id/1458213363/ru/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE/%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE-%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%BE%D0%B9-%D0%BD%D0%B5%D0%BE%D0%BD-%D1%81-%D0%BF%D0%BE%D0%B4%D0%B8%D1%83%D0%BC%D0%BD%D1%8B%D0%BC-%D1%84%D0%BE%D0%BD%D0%BE%D0%BC.mp4?s=mp4-640x640-is&k=20&c=ul9G2-kZEJvjMstZajHJnDOQz5ZQBdtA9QGltToBGyU=" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+<header>
+    <div class="logo-container">
+        <a href="index.html" style="text-decoration: none; color: white;">
+            <img src="https://cdn.prod.website-files.com/61a9889b624de53b8f5cbd61/6216419d583e5a3cb4c0cea3_Velmenni_logo.png" alt="Velmenni Logo" style="height: 50px; margin-right: 15px;" />
+        </a>
+    </div>
+        <nav class="nav-menu"> 
+            <a href="/" aria-current="page" class="link-block w-inline-block w--current">
+                <div class="text-block">Home</div>
+            </a>
+            <div class="dropdown">
+                <a href="choose.html" class="dropbtn">Product</a>
+                <div class="dropdown-content">
+                    <a href="lifi-indoor.html">LiFi Indoor</a>
+                    <a href="lifi-outdoor.html">LiFi Outdoor</a>
+                </div>
+            </div>
+            <a href="work.html" class="link-block w-inline-block">
+                <div class="text-block-2">How it works</div>
+            </a>
+            <a href="Schedule.html">Demo</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <button id="themeToggle">🕷</button>
+</header>
+<body>
+
+<div class="container">
+    <h1>Select a LiFi Product</h1>
+    <div class="button-group">
+        <a href="lifi-indoor.html" class="option-button">Indoor</a>
+        <a href="lifi-outdoor.html" class="option-button">Outdoor</a>
+    </div>
+</div>
+    <footer class="section-footer">
+        <div class="footer-email-capture">
+            <div class="grid-container left-alignment">
+                <div class="footer-description-text">We can help you grow at a lighting speed</div>
+                <h2 class="h2 white">Stay updated</h2>
+            </div>
+            <form class="form">
+                <label for="email" class="input-text">Email Address:</label>
+                <div class="email-capture">
+                    <input type="email" placeholder="Enter your email address" id="email" required class="text-field w-input">
+                    <input type="submit" value="Submit" class="submit-button w-button">
+                </div>
+            </form>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="w-layout-grid footer-links">
+            <div class="footer-link-block">
+                <h2 class="h2 white">Company</h2>
+                <a href="about.html" class="footer-link">About Us</a>
+                <a href="career.html" class="footer-link">Careers</a>
+                <a href="contact.html" class="footer-link">Contact Us</a>
+            </div>
+            <div class="footer-link-block">
+                <h2 class="h2 white">Resources</h2>
+                <a href="blog.html" class="footer-link">Blog</a>
+                <a href="caseStudy.html" class="footer-link">Case Studies</a>
+                <a href="whitepaper.html" class="footer-link">Whitepapers</a>
+            </div>
+            <div class="footer-link-block">
+                <h2 class="h2 white">Support</h2>
+                <a href="faq.html" class="footer-link">FAQ</a>
+                <a href="documentation.html" class="footer-link">Documentation</a>
+                <a href="Community.html" class="footer-link">Community</a>
+            </div>
+        </div>
+
+        <p>&copy; 2025 Velmenni. All rights reserved.</p>
+    </footer>
+</body>
+</html>

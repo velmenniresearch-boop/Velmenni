@@ -1,0 +1,735 @@
+:root {
+    --primary: #0a1035;
+    --accent: #1abc9c;
+    --light: #f4f7fa;
+    --text: #333;
+    --white: #ffffff;
+    --footer-bg: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.logo-container img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent);
+}
+
+#themeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: white;
+}
+
+.section:nth-child(even) {
+    background: #eef2f5;
+}
+
+.content {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+.content h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.content ul {
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+.content ul li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+}
+
+.illustration {
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle at center, #1abc9c 40%, #16a085 100%);
+    border-radius: 50%;
+    animation: pulse 2.5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Footer Section */
+.section-footer {
+    background: var(--footer-bg);
+    color: white;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-email-capture {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.footer-description-text {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.h2.white {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-text {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.email-capture {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.text-field {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.submit-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background: #13967f;
+}
+
+.footer-divider {
+    height: 2px;
+    background: rgb(238, 235, 235);
+    margin: 2rem 0;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.footer-link-block h2 {
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.footer-link {
+    display: block;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.section {
+    flex-direction: column;
+    text-align: center;
+}
+
+.box {
+    width: 180px;
+    height: 180px;
+    font-size: 1rem;
+}
+
+.email-capture {
+    flex-direction: column;
+}
+
+.text-field {
+    max-width: 100%;
+}
+
+.submit-button {
+    width: 100%;
+}
+}
+.intro-section {
+    background: #fff;
+    padding: 4rem 2rem;
+}
+
+.intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+.intro-image {
+    flex: 100px;
+    text-align: center;
+}
+
+.intro-image img {
+    max-width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgb(1, 253, 241);
+}
+
+.intro-content {
+    flex: 1 1 500px;
+}
+
+.intro-content h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.intro-content ul {
+    padding-left: 1.2rem;
+}
+
+.intro-content ul li {
+    margin-bottom: 0.75rem;
+    list-style-type: disc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.intro-container {
+    flex-direction: column;
+    text-align: center;
+}
+
+.intro-content {
+    text-align: left;
+}
+}
+.how-lifi-works {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.how-lifi-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.how-lifi-text {
+    flex: 1 1 50%;
+    padding-right: 30px;
+}
+
+.how-lifi-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.how-lifi-text ul {
+    padding-left: 20px;
+}
+
+.how-lifi-text li {
+    margin-bottom: 10px;
+}
+
+.how-lifi-image {
+    flex: 1 1 40%;
+    text-align: right;
+}
+
+.how-lifi-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+@media (max-width: 768px) {
+    .how-lifi-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .how-lifi-text, .how-lifi-image {
+        padding: 0;
+        flex: 1 1 100%;
+    }
+
+    .how-lifi-image {
+        margin-top: 20px;
+    }
+}
+.core-features {
+    position: relative;
+    background-image: url('https://hilelectronic.com/wp-content/uploads/2023/10/Circuit-Board-Patterns.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    overflow: hidden;
+}
+/* Add a dark overlay for readability */
+.core-features::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgb(255, 255, 255); /* Adjust opacity as needed */
+    z-index: 1;
+}
+.core-features-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.core-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.core-logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+.core-features h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.features-boxes {
+    background-color: rgba(255, 255, 255, 0.15); /* translucent white */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    color: #0fd4ee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-box {
+    background-color: #f5f9fc;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    flex: 1 1 30%;
+    min-width: 280px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #0077cc;
+}
+
+.feature-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-box li {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.feature-box li i {
+    color: #0077cc;
+    font-size: 1.1em;
+    margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+    .features-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        width: 90%;
+    }
+}
+@media (max-width: 1024px) {
+.feature-box2 {
+        flex: 1 1 45%;
+    }
+}
+.feature-box ul li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.feature-box ul li i {
+    color: #0077cc;
+    font-size: 1.2em;
+    min-width: 20px;
+}
+/* Container for dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Main button (Product) */
+.dropbtn {
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown on hover or focus */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Optional hover effect on links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.lifi-concept-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.lifi-concept-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.concept-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.concept-box.reverse {
+    flex-direction: row-reverse;
+}
+
+.concept-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.concept-text {
+    max-width: 600px;
+    text-align: left;
+}
+/* Video styling to cover the whole background */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: keep-up; /* ensures the video covers the entire background */
+    object-position: center;
+    filter: brightness(1.6); /* dim the video for text readability */
+}
+
+/* Content on top */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 40px;
+}
+
+/* ========== Contact Page Styles ========== */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #0a0a23;
+}
+
+.contact-form .text-field,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.contact-form .text-field:focus,
+.contact-form textarea:focus {
+    border-color: #00cfff;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .submit-button {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #00cfff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-button:hover {
+    background-color: #00afd5;
+}
+
+/* Reuse these for consistent layout */
+.hero-content, .company-mission, .vision {
+    margin-bottom: 40px;
+}
+
+.vision p a {
+    color: #00cfff;
+    text-decoration: none;
+}
+
+.vision p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 100%;
+    }
+}
+/* ========== Resources Page ========== */
+.resource-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.resource-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 300px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #0a0a23;
+}
+
+.resource-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.resource-card .submit-button {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resource-list {
+        flex-direction: column;
+    }
+}
+/* ========== Case Study Enhancements ========== */
+.hero-content .subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+blockquote {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-left: 5px solid #00cfff;
+    font-style: italic;
+    color: #333;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-style: normal;
+    color: #666;
+}

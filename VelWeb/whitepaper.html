@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Velmenni Whitepapers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://miro.medium.com/v2/resize:fit:2400/1*ktp5PvpkcZ0Mvb9gwzLiDg.png" type="image/x-icon">
+  <link rel="stylesheet" href="style2.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background-color: #111;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      position: relative;
+    }
+
+    .logo-container img {
+      height: 40px;
+    }
+
+    nav.nav-menu {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav.nav-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav.nav-menu a:hover,
+    nav.nav-menu a.w--current {
+      background-color: #1a73e8;
+    }
+
+    .main-content {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px 30px;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    }
+
+    .main-content h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .main-content p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .whitepaper-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .whitepaper-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #1a73e8;
+      transition: transform 0.2s ease;
+    }
+
+    .whitepaper-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .whitepaper-card h3 {
+      margin-top: 0;
+      color: #1a73e8;
+    }
+
+    .whitepaper-card p {
+      font-size: 0.95em;
+      margin-bottom: 15px;
+    }
+
+    .whitepaper-card a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whitepaper-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer.section-footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #1c1c1c;
+      color: #fff;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://media.istockphoto.com/id/1441806632/ru/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE/%D0%B1%D0%BE%D0%BA%D0%B5-%D1%81%D0%B2%D0%B5%D1%82-%D0%BD%D0%B0%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B0%D0%B7%D0%BC%D1%8B%D1%82%D0%B8%D0%B5-%D1%81%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%D0%B5%D1%82-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D1%83%D1%80%D0%BE%D0%B9-%D0%B2%D0%B5%D1%80%D1%82%D0%B8%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE.mp4?s=mp4-640x640-is&k=20&c=R-TfpKnloGbt5rh97W8omew8LZMp6xTc-AydVHjViWM=" type="video/mp4">
+  </video>
+
+  <header>
+    <div class="logo-container">
+        <a href="index.html" style="text-decoration: none; color: white;">
+            <img src="https://cdn.prod.website-files.com/61a9889b624de53b8f5cbd61/6216419d583e5a3cb4c0cea3_Velmenni_logo.png" alt="Velmenni Logo" style="height: 50px; margin-right: 15px;" />
+        </a>
+    </div>
+    <nav class="nav-menu">
+      <a href="/">Home</a>
+      <a href="choose.html">Product</a>
+      <a href="work.html">How it works</a>
+      <a href="Schedule.html">Demo</a>
+      <a href="blog.html">Blog</a>
+      <a href="community.html">Community</a>
+      <a href="whitepaper.html" class="w--current">Whitepapers</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h1>Download Our Whitepapers</h1>
+    <p>Our whitepapers are comprehensive guides designed to educate and inform you about the development, deployment, and benefits of Li-Fi and related technologies. Download and explore our in-depth technical documents.</p>
+
+    <div class="whitepaper-grid">
+      <div class="whitepaper-card">
+        <h3>Li-Fi Fundamentals</h3>
+        <p>Understand the science and engineering behind Li-Fi, its architecture, and deployment scenarios.</p>
+        <a href="Li-FiFundamentals.pdf" target="_blank">Download PDF →</a>
+      </div>
+      <div class="whitepaper-card">
+        <h3>Security in Light-Based Communication</h3>
+        <p>Explore the security aspects of using Li-Fi in sensitive and high-risk environments.</p>
+        <a href="lifi-security.pdf" target="_blank">Download PDF →</a>
+      </div>
+      <div class="whitepaper-card">
+        <h3>Li-Fi in Smart Cities</h3>
+        <p>Learn how Li-Fi can drive innovation in urban infrastructure and IoT-powered environments.</p>
+        <a href="smart-cities-lifi.pdf" target="_blank">Download PDF →</a>
+      </div>
+      <div class="whitepaper-card">
+        <h3>Industrial Use Cases</h3>
+        <p>Real-world applications of Li-Fi in factories, logistics, and remote industrial operations.</p>
+        <a href="industrial-lifi.pdf" target="_blank">Download PDF →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="section-footer">
+    <p>&copy; 2025 Velmenni. All rights reserved.</p>
+  </footer>
+</body>
+</html>

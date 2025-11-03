@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Li-Fi vs Wi-Fi: What's the Difference? | Velmenni Blog</title> 
+  <link rel="icon" href="https://miro.medium.com/v2/resize:fit:2400/1*ktp5PvpkcZ0Mvb9gwzLiDg.png" type="image/x-icon" />
+  <style>
+    /* Fullscreen video background */
+    #bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5); /* dim for text readability */
+    }
+    /* Content container on top of video */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 40px auto 60px;
+      padding: 20px 30px;
+      background: rgba(0,0,0,0.55);
+      border-radius: 10px;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+    /* Header and nav styling */
+    header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      background: rgba(0,0,0,0.7);
+      padding: 10px 20px;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    }
+    .logo-container img {
+      height: 40px;
+    }
+    nav.nav-menu {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    nav.nav-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    nav.nav-menu a:hover,
+    nav.nav-menu a.w--current {
+      background-color: #1a73e8;
+    }
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+    }
+    .dropbtn {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      user-select: none;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(0,0,0,0.85);
+      min-width: 140px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+      border-radius: 6px;
+      top: 120%;
+      left: 0;
+      z-index: 10;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #1a73e8;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Footer styling */
+    footer.section-footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #1c1c1c;
+      color: #fff;
+      font-size: 0.9rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      z-index: 1;
+      margin-top: 60px;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .content {
+        margin: 20px 10px 40px;
+        padding: 15px 20px;
+      }
+      nav.nav-menu {
+        gap: 10px;
+      }
+      .logo-container img {
+        height: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://cdn.pixabay.com/video/2024/06/21/217642_large.mp4" type="video/mp4" />
+    <source src="https://cdn.pixabay.com/video/2024/09/16/231786_large.mp4" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="logo-container">
+        <a href="index.html" style="text-decoration: none; color: white;">
+            <img src="https://cdn.prod.website-files.com/61a9889b624de53b8f5cbd61/6216419d583e5a3cb4c0cea3_Velmenni_logo.png" alt="Velmenni Logo" style="height: 50px; margin-right: 15px;" />
+        </a>
+    </div>
+    <nav class="nav-menu">
+      <a href="/" class="link-block w-inline-block">Home</a>
+      <div class="dropdown">
+        <a href="choose.html  " class="dropbtn">Product</a>
+        <div class="dropdown-content">
+          <a href="lifi-indoor.html">LiFi Indoor</a>
+          <a href="lifi-outdoor.html">LiFi Outdoor</a>
+        </div>
+      </div>
+      <a href="work.html" class="link-block w-inline-block">How it works</a>
+      <a href="Schedule.html" class="link-block w-inline-block">Demo</a>
+      <a href="blog.html" class="link-block w-inline-block w--current">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="blog-post-article">
+        <h1>Li-Fi vs Wi-Fi: What's the Difference?</h1>
+        <p><em>Published on June 9, 2025</em></p>
+        <img src="https://cdn.prod.website-files.com/61a9889b624de570b65cbd7e/62157658f36bb01c43cae3bb_All-That-You-Need-To-Know-About-Light-Communication-1024x597.png" alt="Li-Fi vs Wi-Fi concept image" style="width:100%; border-radius: 8px; margin-bottom: 20px;" />
+        
+        <section>
+          <h2>Introduction</h2>
+          <p>Wireless communication is essential in today’s connected world. While Wi-Fi has been the dominant technology for years, Li-Fi is emerging as a powerful alternative that uses light to transmit data. This article explores the key differences between Li-Fi and Wi-Fi, their advantages, and potential use cases.</p>
+        </section>
+
+        <section>
+          <h2>What is Wi-Fi?</h2>
+          <p>Wi-Fi (Wireless Fidelity) uses radio waves to transmit data between devices and routers. It is widely used in homes, offices, and public spaces to enable wireless internet connectivity. Wi-Fi operates on the 2.4 GHz and 5 GHz frequency bands, providing flexibility but also facing congestion and interference issues as the number of connected devices grows.</p>
+        </section>
+
+        <section>
+          <h2>What is Li-Fi?</h2>
+          <p>Li-Fi (Light Fidelity) uses visible light spectrum to transmit data. It leverages LED lights that flicker at extremely high speeds, imperceptible to the human eye, to send information wirelessly. Since it uses light instead of radio waves, Li-Fi can offer higher speeds, enhanced security, and reduced interference.</p>
+        </section>
+
+        <section>
+          <h2>Key Differences Between Li-Fi and Wi-Fi</h2>
+          <ul>
+            <li><strong>Transmission Medium:</strong> Wi-Fi uses radio waves; Li-Fi uses visible light.</li>
+            <li><strong>Speed:</strong> Li-Fi can potentially offer much higher data rates than Wi-Fi.</li>
+            <li><strong>Range:</strong> Wi-Fi can work over larger distances; Li-Fi requires line-of-sight within a room.</li>
+            <li><strong>Interference:</strong> Wi-Fi signals can be affected by other radio signals; Li-Fi is immune to radio interference.</li>
+            <li><strong>Security:</strong> Li-Fi signals cannot penetrate walls, making them more secure against hacking.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Use Cases</h2>
+          <p>Wi-Fi remains the go-to technology for general wireless connectivity in homes and public spaces. Li-Fi is gaining traction in specialized environments where radio frequency interference is a concern, such as hospitals, airplanes, and industrial facilities.</p>
+        </section>
+
+        <section>
+          <h2>Conclusion</h2>
+          <p>Both Li-Fi and Wi-Fi have their strengths and ideal use cases. While Wi-Fi offers flexibility and broad coverage, Li-Fi offers promising speed, security, and interference advantages. As Li-Fi technology matures, it may complement Wi-Fi to create more efficient and secure wireless communication ecosystems.</p>
+        </section>
+
+        <p><em>Written by Velmenni Technology Team</em></p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="section-footer">
+    <p>&copy; 2025 Velmenni. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

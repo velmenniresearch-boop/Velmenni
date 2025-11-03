@@ -1,0 +1,239 @@
+/* ---------- Base Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- Background Video ---------- */
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  height: 45px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.link-block {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.link-block:hover {
+  color: #00bfff;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* ---------- Hero Section ---------- */
+.hero-content {
+  text-align: center;
+  color: #fff;
+  padding: 120px 20px 80px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+}
+
+/* ---------- Job Details ---------- */
+.job-details {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-details h2,
+.job-details h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.job-details ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.job-details p {
+  margin-bottom: 15px;
+}
+
+/* ---------- Form ---------- */
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.application-form input,
+.application-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.submit-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background: #0056b3;
+}
+
+.success-message {
+  display: none;
+  background: #e6ffe6;
+  color: #006600;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ---------- Footer ---------- */
+.section-footer {
+  background: #001a33;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.footer-email-capture {
+  margin-bottom: 30px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.footer-link-block {
+  min-width: 150px;
+}
+
+.footer-link {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 5px 0;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #00bfff;
+}
+
+.footer-divider {
+  height: 1px;
+  background: #004080;
+  margin: 30px auto;
+  width: 80%;
+}
+
+footer p {
+  font-size: 0.9em;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+/* ---------- Dark Mode ---------- */
+body.dark-mode {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+}
+
+body.dark-mode .job-details {
+  background: rgba(30, 30, 30, 0.9);
+  color: #e71515;
+}
+
+body.dark-mode header {
+  background: rgba(20, 20, 20, 0.7);
+}
+
+body.dark-mode .link-block {
+  color: #ddd;
+}
+
+body.dark-mode .footer-link {
+  color: #b2e2ee;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .job-details {
+    padding: 30px 15px;
+  }
+}
+
+.required {
+  color: red;
+}
